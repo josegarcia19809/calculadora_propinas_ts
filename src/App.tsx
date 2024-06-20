@@ -1,8 +1,12 @@
 import {menuItems} from "./data/db.ts";
 import MenuItem from "./components/MenuItem.tsx";
+import useOrder from "./hooks/useOrder.ts";
 
 
 const App = () => {
+
+    const {addItem} = useOrder();
+
     return (
         <>
             <header className="bg-teal-400 py-5">
@@ -18,6 +22,7 @@ const App = () => {
                             <MenuItem
                                 key={item.id}
                                 item={item}
+                                addItem={addItem}
                             >
                             </MenuItem>
                         ))}
