@@ -36,7 +36,9 @@ const App = () => {
                         order={order}
                         removeItem={removeItem}
                     />
-                    <OrderTotals/>
+                    <OrderTotals
+                    order={order}
+                    />
                 </div>
             </main>
         </>
