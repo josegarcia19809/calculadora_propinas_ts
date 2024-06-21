@@ -2,6 +2,7 @@ import {menuItems} from "./data/db.ts";
 import MenuItem from "./components/MenuItem.tsx";
 import useOrder from "./hooks/useOrder.ts";
 import OrderContents from "./components/OrderContents.tsx";
+import OrderTotals from "./components/OrderTotals.tsx";
 
 
 const App = () => {
@@ -35,6 +36,7 @@ const App = () => {
                         order={order}
                         removeItem={removeItem}
                     />
+                    <OrderTotals/>
                 </div>
             </main>
         </>
