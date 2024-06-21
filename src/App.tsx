@@ -1,11 +1,12 @@
 import {menuItems} from "./data/db.ts";
 import MenuItem from "./components/MenuItem.tsx";
 import useOrder from "./hooks/useOrder.ts";
+import OrderContents from "./components/OrderContents.tsx";
 
 
 const App = () => {
 
-    const {addItem} = useOrder();
+    const {order, addItem} = useOrder();
 
     return (
         <>
@@ -28,8 +29,10 @@ const App = () => {
                         ))}
                     </div>
                 </div>
-                <div>
-                    Consumo
+                <div className="border border-dashed border-slate-300 p-5 rounded-lg space-y-10">
+                    <OrderContents
+                    order={order}
+                    />
                 </div>
             </main>
         </>
