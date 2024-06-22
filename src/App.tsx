@@ -8,7 +8,7 @@ import TipPercentageForm from "./components/TipPercentageForm.tsx";
 
 const App = () => {
 
-    const {order, addItem, removeItem} = useOrder();
+    const {order, addItem, removeItem, tip, setTip} = useOrder();
 
     return (
         <>
@@ -37,7 +37,9 @@ const App = () => {
                         order={order}
                         removeItem={removeItem}
                     />
-                    <TipPercentageForm/>
+                    <TipPercentageForm
+                    setTip={setTip}
+                    />
                     <OrderTotals
                         order={order}
                     />
